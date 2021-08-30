@@ -18,66 +18,66 @@ public class MainActivity extends AppCompatActivity {
     Double numero1, numero2, resultado;
     String operador;
 
-    public void onClickCButton(View miView){
+    public void onClickCButton(View miView) {
         TextView tv = findViewById(R.id.Res);
         tv.setText("");
     }
 
-    public void onClickButtonZero(View miView){
+    public void onClickButtonZero(View miView) {
         TextView tv = findViewById(R.id.Res);
         String value = tv.getText().toString();
         tv.setText(value + "0");
     }
 
-    public void onClickButtonOne(View miView){
+    public void onClickButtonOne(View miView) {
         TextView tv = findViewById(R.id.Res);
         String value = tv.getText().toString();
         tv.setText(value + "1");
     }
 
-    public void onClickButtonTwo(View miView){
+    public void onClickButtonTwo(View miView) {
         TextView tv = findViewById(R.id.Res);
         String value = tv.getText().toString();
         tv.setText(value + "2");
     }
 
-    public void onClickButtonThree(View miView){
+    public void onClickButtonThree(View miView) {
         TextView tv = findViewById(R.id.Res);
         String value = tv.getText().toString();
         tv.setText(value + "3");
     }
 
-    public void onClickButtonFour(View miView){
+    public void onClickButtonFour(View miView) {
         TextView tv = findViewById(R.id.Res);
         String value = tv.getText().toString();
         tv.setText(value + "4");
     }
 
-    public void onClickButtonFive(View miView){
+    public void onClickButtonFive(View miView) {
         TextView tv = findViewById(R.id.Res);
         String value = tv.getText().toString();
         tv.setText(value + "5");
     }
 
-    public void onClickButtonSix(View miView){
+    public void onClickButtonSix(View miView) {
         TextView tv = findViewById(R.id.Res);
         String value = tv.getText().toString();
         tv.setText(value + "6");
     }
 
-    public void onClickButtonSeven(View miView){
+    public void onClickButtonSeven(View miView) {
         TextView tv = findViewById(R.id.Res);
         String value = tv.getText().toString();
         tv.setText(value + "7");
     }
 
-    public void onClickButtonEight(View miView){
+    public void onClickButtonEight(View miView) {
         TextView tv = findViewById(R.id.Res);
         String value = tv.getText().toString();
         tv.setText(value + "8");
     }
 
-    public void onClickButtonNine(View miView){
+    public void onClickButtonNine(View miView) {
         TextView tv = findViewById(R.id.Res);
         String value = tv.getText().toString();
         tv.setText(value + "9");
@@ -89,17 +89,17 @@ public class MainActivity extends AppCompatActivity {
         tv.setText("");
     }
 
-    public void onClickPlus(View miView){
-        operador="+";
+    public void onClickPlus(View miView) {
+        operador = "+";
         onClickNum1captureoperation(miView);
     }
 
-    public void onClickMinus(View miView){
-        operador="-";
+    public void onClickMinus(View miView) {
+        operador = "-";
         onClickNum1captureoperation(miView);
     }
 
-    public void onClickequals(View miView){
+    public void onClickequals(View miView) {
         TextView tv = (TextView) findViewById(R.id.Res);
         numero2 = Double.parseDouble(tv.getText().toString());
 
@@ -107,15 +107,15 @@ public class MainActivity extends AppCompatActivity {
 
             if (operador.equals("+")) {
                 resultado = numero1 + numero2;
+                tv.setText(resultado.toString());
             }
-                else if (operador.equals("-")) {
-                    resultado = numero1 - numero2;
-            tv.setText(resultado.toString());
-        }
-        catch(NumberFormatException nfe) {
-            Toast.makeText( this, "Numero Incorrecto", Toast.LENGTH_SHORT).show();
+            else if (operador.equals("-")) {
+                resultado = numero1 - numero2;
+                tv.setText(resultado.toString());
+            }
+        } catch (NumberFormatException nfe) {
+            Toast.makeText(this, "Numero Incorrecto", Toast.LENGTH_SHORT).show();
         }
         resultado = numero1;
     }
-
 }
