@@ -107,10 +107,9 @@ public class MainActivity extends AppCompatActivity {
 
             if (operador.equals("+")) {
                 resultado = numero1 + numero2;
+            }
                 else if (operador.equals("-")) {
                     resultado = numero1 - numero2;
-                }
-            }
             tv.setText(resultado.toString());
         }
         catch(NumberFormatException nfe) {
