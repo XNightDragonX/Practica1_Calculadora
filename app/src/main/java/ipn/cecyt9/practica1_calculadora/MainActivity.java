@@ -25,10 +25,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickButtonPoint(View miView) {
-        if (comprobant=false) {
+        if (comprobant==false) {
             TextView tv = findViewById(R.id.Res);
             String value = tv.getText().toString();
-            tv.setText(value + ".1");
+            tv.setText(value + ".");
             comprobant = true;
         }
     }
@@ -102,21 +102,25 @@ public class MainActivity extends AppCompatActivity {
     public void onClickPlus(View miView) {
         operador = "+";
         onClickNum1captureoperation(miView);
+        comprobant = false;
     }
 
     public void onClickMinus(View miView) {
         operador = "-";
         onClickNum1captureoperation(miView);
+        comprobant = false;
     }
 
     public void onClickDivide(View miView) {
         operador = "÷";
         onClickNum1captureoperation(miView);
+        comprobant = false;
     }
 
     public void onClickMultiply(View miView) {
         operador = "×";
         onClickNum1captureoperation(miView);
+        comprobant = false;
     }
 
     public void onClickPorcentage(View miView) {
@@ -129,7 +133,6 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Numero Incorrecto", Toast.LENGTH_SHORT).show();
         }
         resultado = numero1;
-        comprobant = false;
     }
 
     public void onClickequals(View miView) {
@@ -158,6 +161,5 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Numero Incorrecto", Toast.LENGTH_SHORT).show();
         }
         resultado = numero1;
-        comprobant = false;
     }
 }
