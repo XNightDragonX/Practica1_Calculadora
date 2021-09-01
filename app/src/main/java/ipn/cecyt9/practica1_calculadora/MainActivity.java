@@ -109,6 +109,16 @@ public class MainActivity extends AppCompatActivity {
         onClickNum1captureoperation(miView);
     }
 
+    public void onClickDivide(View miView) {
+        operador = "÷";
+        onClickNum1captureoperation(miView);
+    }
+
+    public void onClickMultiply(View miView) {
+        operador = "×";
+        onClickNum1captureoperation(miView);
+    }
+
     public void onClickPorcentage(View miView) {
         TextView tv = (TextView) findViewById(R.id.Res);
         numero1 = Double.parseDouble(tv.getText().toString());
@@ -134,6 +144,14 @@ public class MainActivity extends AppCompatActivity {
             }
             else if (operador.equals("-")) {
                 resultado = numero1 - numero2;
+                tv.setText(resultado.toString());
+            }
+            else if (operador.equals("÷")) {
+                resultado = numero1/numero2;
+                tv.setText(resultado.toString());
+            }
+            else if (operador.equals("×")) {
+                resultado = numero1 * numero2;
                 tv.setText(resultado.toString());
             }
         } catch (NumberFormatException nfe) {
