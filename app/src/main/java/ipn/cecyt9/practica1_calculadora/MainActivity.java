@@ -16,11 +16,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
     Double numero1, numero2, resultado;
+    boolean  comprobant = false;
     String operador;
 
     public void onClickCButton(View miView) {
         TextView tv = findViewById(R.id.Res);
         tv.setText("");
+    }
+
+    public void onClickButtonPoint(View miView) {
+        if (comprobant=false) {
+            TextView tv = findViewById(R.id.Res);
+            String value = tv.getText().toString();
+            tv.setText(value + ".1");
+            comprobant = true;
+        }
     }
 
     public void onClickButtonZero(View miView) {
@@ -99,6 +109,19 @@ public class MainActivity extends AppCompatActivity {
         onClickNum1captureoperation(miView);
     }
 
+    public void onClickPorcentage(View miView) {
+        TextView tv = (TextView) findViewById(R.id.Res);
+        numero1 = Double.parseDouble(tv.getText().toString());
+        try {
+            resultado = numero1 * 0.01;
+            tv.setText(resultado.toString());
+        } catch (NumberFormatException nfe) {
+            Toast.makeText(this, "Numero Incorrecto", Toast.LENGTH_SHORT).show();
+        }
+        resultado = numero1;
+        comprobant = false;
+    }
+
     public void onClickequals(View miView) {
         TextView tv = (TextView) findViewById(R.id.Res);
         numero2 = Double.parseDouble(tv.getText().toString());
@@ -117,5 +140,6 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Numero Incorrecto", Toast.LENGTH_SHORT).show();
         }
         resultado = numero1;
+        comprobant = false;
     }
 }

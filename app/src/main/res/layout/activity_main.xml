@@ -133,6 +133,7 @@
         android:id="@+id/button12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="onClickPorcentage"
         android:text="%"
         app:backgroundTint="@color/purple_200"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -160,6 +161,7 @@
         android:id="@+id/ButtonNumberPoint"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="onClickButtonPoint"
         android:text="."
         app:backgroundTint="@color/purple_200"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -227,18 +229,18 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="88dp"
-        android:layout_height="96dp"
+        android:layout_width="86dp"
+        android:layout_height="105dp"
         android:layout_marginTop="60dp"
         android:onClick="onClickequals"
         android:text="="
         app:backgroundTint="@color/purple_200"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.894"
+        app:layout_constraintHorizontal_bias="0.895"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Res"
-        app:layout_constraintVertical_bias="0.679" />
+        app:layout_constraintVertical_bias="0.686" />
 
     <Button
         android:id="@+id/CButton"
